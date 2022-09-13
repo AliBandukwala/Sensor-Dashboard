@@ -17,7 +17,8 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import { AccountCircle, SearchOutlined, Home, DescriptionRounded, GroupRounded, Settings, SsidChart, ImageRounded, } from '@mui/icons-material';
+import { AccountCircle, SearchOutlined, Home, DescriptionRounded, GroupRounded, Settings, SsidChart } from '@mui/icons-material';
+import logo from '../../Assets/Images/logo.jpg'
 import DashBoard from '../Dashboard/Components/dashboard';
 import { borderStyle } from '../../Assets/consts';
 import AddOREditScreenLoadingUI from '../Add-EditSensor/Components/route_loading_ui';
@@ -186,7 +187,7 @@ export default function HomeDashboard() {
             <MenuIcon />
           </IconButton>
           <div style={{flexGrow: 1, display: 'flex', justifyItems: 'start'}} >
-            <ImageRounded fontSize='large' />
+            <img src={logo} width='40px' height='40px' style={{borderRadius:'35px'}} />
           </div>
           <div style={{display: 'flex' }}>
               <div style={{display: 'flex', flexDirection:'column', alignItems: 'end', paddingRight: 5, }} >
