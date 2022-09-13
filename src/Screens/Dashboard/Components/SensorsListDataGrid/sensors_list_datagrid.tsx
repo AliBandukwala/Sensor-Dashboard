@@ -5,6 +5,7 @@ import { NavigateOptions, useNavigate } from 'react-router-dom';
 import { AddCircleOutline } from '@mui/icons-material';
 import useFetch from '../../../../Utils/CustomHooks/use_fetch';
 import CustomTitle from '../../../../Utils/Components/custom_title';
+import { timeSince } from '../../../../Utils/Functions/convert_dates';
 
 
 const SensorsListDataGrid = () => {
@@ -20,6 +21,11 @@ const SensorsListDataGrid = () => {
 
     if(data){
         sensorsList = data.results as Sensor[]
+
+        // Converting unix-time to timeSince formate:
+        sensorsList.forEach((sensor: Sensor) => {
+            sensor.last_online = (sensor.last_online !== 'NaN seconds' )? timeSince(sensor.last_online) : ''
+        })
 
         // Setting column header cells of the datagrid (table)
         columns = [
