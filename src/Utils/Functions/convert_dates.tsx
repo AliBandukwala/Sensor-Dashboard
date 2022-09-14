@@ -8,7 +8,7 @@ export const convertStatDate_ToDateMonth = (stats: Stat[]): Stat[] => {
         chartsData.push(
             {
                 temp: stat.temp, 
-                time:  date.getDate()+'/'+date.getMonth()
+                time:  date.getDate()+'/'+(date.getMonth()+1)
             } as Stat
         )
     }
