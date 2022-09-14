@@ -187,7 +187,7 @@ export default function HomeDashboard() {
             <MenuIcon />
           </IconButton>
           <div style={{flexGrow: 1, display: 'flex', justifyItems: 'start'}} >
-            <img src={logo} width='40px' height='40px' style={{borderRadius:'35px'}} />
+            <img src={logo} width='40px' alt='logo' height='40px' style={{borderRadius:'35px'}} />
           </div>
           <div style={{display: 'flex' }}>
               <div style={{display: 'flex', flexDirection:'column', alignItems: 'end', paddingRight: 5, }} >
